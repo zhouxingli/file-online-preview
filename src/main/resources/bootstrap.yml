@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: file-online-preview
+  profiles:
+    active: data-center-dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.100.118:8848
+        namespace: 127531a2-3f3b-4cc7-9bb6-27cccd8e7e67
+      config:
+        server-addr: 192.168.100.118:8848
+        file-extension: yaml
+        group: DEFAULT_GROUP
+        namespace: 127531a2-3f3b-4cc7-9bb6-27cccd8e7e67
+#    sentinel:
+#      transport:
+#        dashboard: 192.168.100.120:8014
+
+#spring:
+#  application:
+#    name: file-online-preview
+#  profiles:
+#    active: data-center-prod
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 10.150.193.231:8887
+#        namespace: 64361f23-232a-4152-8c5d-74cb5fd4e181
+#      config:
+#        server-addr: 10.150.193.231:8887
+#        file-extension: yaml
+#        group: DEFAULT_GROUP
+#        namespace: 64361f23-232a-4152-8c5d-74cb5fd4e181
+feign:
+  hystrix:
+    enabled: true
